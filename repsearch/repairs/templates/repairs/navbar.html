@@ -12,15 +12,15 @@
           <div class="toggle-menu__lines"></div>
         </label>
         <ul class="header__menu">
-          <li class="header__menuItem"><a href="{% url 'profiles' %}">Masters</a></li>
-          <li class="header__menuItem"><a href="{% url 'repairs' %}">Repairs</a></li>
-          <li class="header__menuItem"><a href="inbox.html">Inbox</a></li>
+          <li class="header__menuItem"><a href="{% url 'profiles' %}">Мастера</a></li>
+          <li class="header__menuItem"><a href="{% url 'repairs' %}">Ремонты</a></li>
+          <li class="header__menuItem"><a href="inbox.html">Входящие сообщения</a></li>
           {% if request.user.is_authenticated %}
-          <li class="header__menuItem"><a href="{% url 'account' %}">Account</a></li>
-          <li class="header__menuItem"><a href="{% url 'create-repair' %}">Add repairs</a></li>
-          <li class="header__menuItem"><a href="{% url 'logout' %}" class="btn btn--sub">Logout</a></li>
+          <li class="header__menuItem"><a href="{% url 'account' %}">Аккаунт</a></li>
+          <li class="header__menuItem"><a href="{% url 'create-repair' %}">Добавить ремонт</a></li>
+          <li class="header__menuItem"><a href="{% url 'logout' %}" class="btn btn--sub">Выйти</a></li>
           {% else %}
-          <li class="header__menuItem"><a href="{% url 'login' %}" class="btn btn--sub">Login/Sign Up</a></li>
+          <li class="header__menuItem"><a href="{% url 'login' %}" class="btn btn--sub">Войти/Зарегистрироваться</a></li>
           {% endif %}
         </ul>
       </nav>
