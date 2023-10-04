@@ -47,8 +47,8 @@
 <!--                        Vote{{repair.vote_total|pluralize:'s'}})-->
 <!--                    </h5>-->
                         <p class="project--rating">
-                        <span style="font-weight: bold;">{{ repair.vote_percent }}%</span> Positive
-                        Feedback ({{ repair.vote }} Vote{{ repair.vote|pluralize:'s' }})
+                        <span style="font-weight: bold;">{{ repair.vote_percent }}%</span> Положительный отзыв
+                         ({{ repair.vote }} Голос{{ repair.vote|pluralize:'а' }})
                         </p>
 
                     {% if request.user.profile.id in repair.reviewers %}
@@ -67,7 +67,7 @@
                             {{ field }}
                         </div>
                         {% endfor %}
-                        <input class="btn btn--sub btn--lg" type="submit" value="Comments"/>
+                        <input class="btn btn--sub btn--lg" type="submit" value="Отправить комментарии"/>
                     </form>
                     {% else %}
                     <a href="{% url 'login' %}">Please login to leave a review</a>

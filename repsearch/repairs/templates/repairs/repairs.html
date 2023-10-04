@@ -5,7 +5,7 @@
     <section class="hero-section text-center">
       <div class="container container--narrow">
         <div class="hero-section__box">
-          <h2>Search for <span>Repairs</span></h2>
+          <h2>Поиск <span>Ремонта</span></h2>
         </div>
 
         <div class="hero-section__search">
@@ -14,10 +14,10 @@
               <label for="formInput#search">Search By Repairs </label>
               <input class="input input--text" id="formInput#search" type="text"
                      name="search_query" value="{{ search_query }}"
-                placeholder="Search by Repair Title" />
+                placeholder="Поиск по названию ремонта" />
             </div>
 
-            <input class="btn btn--sub btn--lg" type="submit" value="Search" />
+            <input class="btn btn--sub btn--lg" type="submit" value="Поиск" />
           </form>
         </div>
       </div>
@@ -35,8 +35,8 @@
                   <h3 class="project__title">{{ repair.title }}</h3>
                   <p><a class="project__author" href="{% url 'repair' repair.id %}">By {{repair.owner.name}}</a></p>
                   <p class="project--rating">
-                    <span style="font-weight: bold;">{{ repair.vote_percent }}%</span> Positive
-                    Feedback ({{ repair.vote }} Vote{{ repair.vote|pluralize:'s' }})
+                    <span style="font-weight: bold;">{{ repair.vote_percent }}%</span> Положительный отзыв
+                     ({{ repair.vote }} Голос{{ repair.vote|pluralize:'а' }})
                   </p>
                   <div class="project__tags">
                     {% for tag in repair.tags.all %}

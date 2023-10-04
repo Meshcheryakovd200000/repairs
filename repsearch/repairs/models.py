@@ -51,8 +51,8 @@ class Tag(models.Model):
 
 class Review(models.Model):
     VOTE_TYPE = (
-        ('up', 'Up Vote'),
-        ('down', 'Down Vote'),
+        ('up', 'Проголосовать положительно'),
+        ('down', 'Проголосовать отрицательно'),
     )
     owner = models.ForeignKey(Profile, on_delete=models.CASCADE)
     repair = models.ForeignKey(Repair, on_delete=models.CASCADE)
